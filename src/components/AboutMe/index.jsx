@@ -18,6 +18,7 @@ const AboutMe = () => {
           <p className="text-start mb-4">
             Also extremely guilty of using too many emojis 😅
           </p>
+          <a href="https://www.linkedin.com/in/cynthia-z/" target="_blank" className="btn btn-primary mx-2" rel="noopener noreferrer">LinkedIn Profile</a>
         </div>
       </div>
 
