@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
   const SERVICE_ID = process.env.VITE_SERVICE_ID;
