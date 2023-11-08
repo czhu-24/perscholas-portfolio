@@ -15,7 +15,7 @@ const ContactMe = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log(process.env);
+    console.log(process);
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
