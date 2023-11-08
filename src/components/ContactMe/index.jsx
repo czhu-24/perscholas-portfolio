@@ -2,9 +2,9 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
-  const SERVICE_ID = "service_c6ofbhg";
-  const TEMPLATE_ID = "template_f1ct9gk";
-  const PUBLIC_KEY = "vAugqBQEDreuG5Lbn";
+  const SERVICE_ID = process.env.SERVICE_KEY;;
+  const TEMPLATE_ID = process.env.TEMPLATE_ID;
+  const PUBLIC_KEY = process.env.PUBLIC_KEY;
 
 
 
