@@ -2,9 +2,9 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
-  const SERVICE_ID = process.env.SERVICE_KEY;;
-  const TEMPLATE_ID = process.env.TEMPLATE_ID;
-  const PUBLIC_KEY = process.env.PUBLIC_KEY;
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;;
+  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
 
 
@@ -15,7 +15,7 @@ const ContactMe = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log(process);
+    console.log(SERVICE_ID);
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
