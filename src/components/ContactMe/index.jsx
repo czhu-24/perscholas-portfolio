@@ -2,9 +2,9 @@ import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 
 const ContactMe = () => {
-  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+  const SERVICE_ID = process.env.VITE_SERVICE_ID;
+  const TEMPLATE_ID = process.env.VITE_TEMPLATE_ID;
+  const PUBLIC_KEY = process.env.VITE_PUBLIC_KEY;
 
   // with useState, this component is re-rendering on each user input
   // but with useRef, it's persisting even after user input
