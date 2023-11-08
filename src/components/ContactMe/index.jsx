@@ -2,7 +2,11 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
-  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;;
+
+  // the import.meta.env is the syntax for accessing the env variable for VITE
+  // i think you have to have a VITE prefix for each env key
+  // and store the .env values inside a secret file within Render,
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
   const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
   const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
@@ -14,8 +18,6 @@ const ContactMe = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    console.log(SERVICE_ID);
 
     emailjs
       .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
